@@ -1,4 +1,5 @@
 package com.example.Practice;
+        import java.util.Arrays;
         import java.util.IntSummaryStatistics;
         import java.util.List;
         import java.util.Map;
@@ -80,5 +81,11 @@ public class Streams {
 //                productsSupplier.get().collect(Collectors.groupingBy(Product::category,
 //                        Collectors.summarizingInt(Product::price)));
 //        System.out.println("Summary Statistics by Category: " + summaryStatisticsByCategory);
+    List<String> str= Arrays.asList("Rohan","Sohan","Mohit","Himanshu");
+    List<String> sortedord=str.stream()
+            .sorted((s1,s2) -> s1.compareTo(s2))
+            .collect(Collectors.toList());
+        System.out.println(sortedord);
+
     }
 }
