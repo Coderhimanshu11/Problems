@@ -31,5 +31,12 @@ public class GrpandAgrPrac {
                 Collectors.summarizingInt(Product::price)
         ));
         System.out.println(summariseInt);
+
+       var partprd =Products.stream().collect(Collectors.partitioningBy(product -> product.price>199));
+        System.out.println(partprd);
+        String PerName="Himanshu";
+        String repeatedName= PerName.repeat(89);
+        System.out.println(repeatedName);
+
     }
 }
